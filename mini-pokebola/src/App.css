@@ -1,24 +1,36 @@
-/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&family=VT323&display=swap');
+
+body {
+    background: radial-gradient(circle, #ff1f1f 0%, #5d0000 100%);
+    background-attachment: fixed;
+    font-family: 'VT323', monospace;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
 .container {
-  margin-top: 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 20px;
+    border: 10px solid #333;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5), 0 20px 40px rgba(0,0,0,0.8);
 }
 
-/* Título principal con la fuente Staatliches */
 .Titulo {
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Staatliches', cursive;
-  font-size: 5rem;
-  letter-spacing: 2px;
-  margin-bottom: 4rem;
+    font-family: 'Staatliches', cursive;
+    font-size: 5rem;
+    color: #ffde00;
+    text-shadow: 4px 4px 0px #3b4cca, 8px 8px 0px rgba(0,0,0,0.5);
+    margin-bottom: 40px;
+    text-align: center;
 }
 
-/* Subtítulos de las columnas */
 h2 {
-  color: white;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Staatliches', cursive;
-  margin-bottom: 3rem;
+    font-family: 'Staatliches', cursive;
+    color: #fff;
+    text-shadow: 2px 2px #000;
+    letter-spacing: 2px;
 }

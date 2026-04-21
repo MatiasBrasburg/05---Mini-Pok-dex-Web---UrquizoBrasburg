@@ -1,0 +1,32 @@
+/* src/Formulario.css */
+label {
+  color: white;
+  font-weight: bold;
+  margin-top: 1rem;
+  display: block;
+}
+
+input[type="text"].u-full-width {
+  background-color: white;
+  border: none;
+  height: 45px;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* Estilo para el botón principal de Skeleton */
+.button-primary {
+  background-color: #33C3F0;
+  border-color: #33C3F0;
+  height: 45px;
+  line-height: 45px;
+  font-size: 1.4rem;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.button-primary:hover {
+  background-color: #1EAEDB;
+  border-color: #1EAEDB;
+  transform: translateY(-2px);
+}

@@ -2,11 +2,10 @@ import { useState } from 'react'
 import './App.css'
 import Formulario from './Formulario'
 import MostrarPokemon from './MostrarPokemon'
+import ListaPokemon from './ListaPokemon'
 
 function App() {
-  
   const [pokemon, setPokemon] = useState(null);
-
   const [cargando, setCargando] = useState(false);
   const [error, setError] = useState('');
 
@@ -19,19 +18,20 @@ function App() {
       <div className="row">
         <div className="one-half column">
           <Formulario
-         
+            ContenidoH2="Buscador"
             setPokemon={setPokemon}
             setCargando={setCargando}
             setError={setError}
           />
-        </div>
-
-        <div className="one-half column">
           <MostrarPokemon 
             pokemon={pokemon}
             cargando={cargando}
             error={error}
           />
+        </div>
+
+        <div className="one-half column">
+          <ListaPokemon />
         </div>
       </div>
     </div>

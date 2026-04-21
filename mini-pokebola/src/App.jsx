@@ -19,7 +19,7 @@ function App() {
       <div className="row">
         <div className="one-half column">
           <Formulario
-            ContenidoH2="Buscador"
+         
             setPokemon={setPokemon}
             setCargando={setCargando}
             setError={setError}

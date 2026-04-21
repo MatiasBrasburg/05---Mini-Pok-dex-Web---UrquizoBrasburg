@@ -1,36 +1,32 @@
 import './Formulario.css'; 
 import { useState } from 'react'
 
-function Formulario({ ContenidoH2, setPokemon, setCargando, setError }) {
+function Formulario({ContenidoH2, setPokemon, setCargando, setError }) {
     const [VariableABuscar, setVariableABuscar] = useState('');
 
     const buscarPokemon = async (e) => {
         e.preventDefault(); 
         if (VariableABuscar.trim() === '') return;
 
-     
         setCargando(true);
         setError('');
         setPokemon(null);
 
         try {
-           
             const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${VariableABuscar.toLowerCase()}`);
             
-           
             if (!response.ok) {
                 throw new Error('Pokémon no encontrado');
             }
 
             const data = await response.json();
             setPokemon(data); 
-            setVariableABuscar('');t
+            setVariableABuscar(''); 
             
         } catch (error) {
             setError('No existe un Pokémon con ese nombre o ID.');
             console.log("Algo salió mal:", error);
         } finally {
-            
             setCargando(false);
         }
     };
